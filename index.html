@@ -3,131 +3,696 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Política de Privacidad - IG Analyzer</title>
+    <title>Política de Privacidad | IG Analyzer Pro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #34495e;
+            --accent: #3498db;
+            --light: #f8f9fa;
+            --gray: #7f8c8d;
+            --border: #e0e0e0;
+            --shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
+            font-family: 'Source Sans Pro', sans-serif;
+            line-height: 1.7;
             color: #333;
+            background-color: #f5f7fa;
+            font-size: 16px;
         }
-        h1, h2 {
-            color: #405de6;
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
+
+        /* Header */
         .header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 60px 0;
+            border-bottom: 4px solid var(--accent);
+        }
+
+        .header-content {
             text-align: center;
-            padding: 20px 0;
-            border-bottom: 2px solid #405de6;
+        }
+
+        .header h1 {
+            font-family: 'Roboto', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            letter-spacing: -0.5px;
+        }
+
+        .header-subtitle {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+            font-weight: 300;
+        }
+
+        .effective-date {
+            margin-top: 25px;
+            padding: 12px 25px;
+            background: rgba(255, 255, 255, 0.1);
+            display: inline-block;
+            border-radius: 4px;
+            font-size: 0.95rem;
+        }
+
+        /* Content */
+        .content {
+            background: white;
+            padding: 60px 0;
+            box-shadow: var(--shadow);
+            position: relative;
+            margin-top: -20px;
+            border-radius: 4px 4px 0 0;
+        }
+
+        .section {
+            margin-bottom: 50px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+
+        .section-title {
+            font-family: 'Roboto', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--accent);
+            display: inline-block;
+        }
+
+        .section-content {
+            line-height: 1.8;
+        }
+
+        .section-content p {
+            margin-bottom: 18px;
+            text-align: justify;
+        }
+
+        .section-content ul, .section-content ol {
+            margin: 20px 0;
+            padding-left: 30px;
+        }
+
+        .section-content li {
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        .section-content li:before {
+            content: "•";
+            color: var(--accent);
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+            position: absolute;
+            left: 0;
+        }
+
+        .highlight-box {
+            background: #f8f9fa;
+            border-left: 4px solid var(--accent);
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .highlight-box-title {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 0.95rem;
+        }
+
+        .data-table th {
+            background: var(--primary);
+            color: white;
+            font-weight: 600;
+            padding: 15px;
+            text-align: left;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .data-table td {
+            padding: 15px;
+            border-bottom: 1px solid var(--border);
+            vertical-align: top;
+        }
+
+        .data-table tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+
+        .data-table tr:hover {
+            background: #f0f0f0;
+        }
+
+        .definition-list {
+            margin: 20px 0;
+        }
+
+        .definition-term {
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 5px;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .definition-description {
+            margin-bottom: 20px;
+            padding-left: 20px;
+            border-left: 2px solid var(--border);
+            padding-top: 2px;
+            padding-bottom: 2px;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--secondary);
+            color: white;
+            padding: 50px 0 30px;
+            margin-top: 50px;
+        }
+
+        .footer-content {
+            text-align: center;
+        }
+
+        .contact-info {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 30px;
+            border-radius: 4px;
             margin-bottom: 30px;
         }
-        .section {
-            margin-bottom: 25px;
-            padding: 15px;
-            background: #f9f9f9;
-            border-radius: 8px;
-            border-left: 4px solid #405de6;
+
+        .contact-title {
+            font-family: 'Roboto', sans-serif;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: white;
+            font-weight: 500;
         }
-        .contact {
-            background: #e8f4ff;
-            padding: 20px;
-            border-radius: 8px;
-            margin-top: 30px;
+
+        .contact-details {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
         }
-        .date {
-            text-align: right;
-            font-style: italic;
-            color: #666;
+
+        .contact-item {
+            text-align: center;
+        }
+
+        .contact-label {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .contact-value {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
+        }
+
+        .copyright {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 30px;
             margin-top: 30px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Navigation */
+        .toc {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 4px;
+            margin: 30px 0;
+            border: 1px solid var(--border);
+        }
+
+        .toc-title {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .toc-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .toc-item {
+            margin-bottom: 10px;
+        }
+
+        .toc-link {
+            color: var(--accent);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            transition: color 0.2s;
+        }
+
+        .toc-link:hover {
+            color: var(--primary);
+            text-decoration: underline;
+        }
+
+        .toc-link:before {
+            content: "§";
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        /* Print styles */
+        @media print {
+            .header {
+                padding: 40px 0;
+            }
+            
+            .content {
+                padding: 40px 0;
+                box-shadow: none;
+            }
+            
+            .footer {
+                display: none;
+            }
+            
+            .toc {
+                display: none;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .header {
+                padding: 40px 0;
+            }
+            
+            .content {
+                padding: 40px 0;
+            }
+            
+            .section {
+                margin-bottom: 40px;
+            }
+            
+            .data-table {
+                display: block;
+                overflow-x: auto;
+            }
+            
+            .contact-details {
+                flex-direction: column;
+                gap: 20px;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>🔒 Política de Privacidad</h1>
-        <h2>IG Analyzer - Extensión para Chrome</h2>
-        <p><strong>Última actualización:</strong> [FECHA ACTUAL]</p>
-    </div>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <h1>POLÍTICA DE PRIVACIDAD</h1>
+                <p class="header-subtitle">IG Analyzer Pro - Extensión para Google Chrome</p>
+                <div class="effective-date">
+                    Última actualización: <span id="currentDate"></span>
+                </div>
+            </div>
+        </div>
+    </header>
 
-    <div class="section">
-        <h2>1. Información General</h2>
-        <p><strong>IG Analyzer</strong> es una extensión de navegador que analiza seguidores y seguidos en Instagram. Esta política de privacidad explica cómo manejamos la información cuando usas nuestra extensión.</p>
-    </div>
+    <!-- Content -->
+    <main class="content">
+        <div class="container">
+            <!-- Table of Contents -->
+            <nav class="toc">
+                <div class="toc-title">Contenido</div>
+                <ul class="toc-list">
+                    <li class="toc-item"><a href="#introduction" class="toc-link">1. Introducción</a></li>
+                    <li class="toc-item"><a href="#scope" class="toc-link">2. Alcance y Aplicación</a></li>
+                    <li class="toc-item"><a href="#data-collection" class="toc-link">3. Recopilación de Información</a></li>
+                    <li class="toc-item"><a href="#data-usage" class="toc-link">4. Uso de la Información</a></li>
+                    <li class="toc-item"><a href="#data-security" class="toc-link">5. Seguridad de los Datos</a></li>
+                    <li class="toc-item"><a href="#user-rights" class="toc-link">6. Derechos del Usuario</a></li>
+                    <li class="toc-item"><a href="#third-parties" class="toc-link">7. Terceros y Enlaces Externos</a></li>
+                    <li class="toc-item"><a href="#changes" class="toc-link">8. Cambios en la Política</a></li>
+                    <li class="toc-item"><a href="#contact" class="toc-link">9. Información de Contacto</a></li>
+                </ul>
+            </nav>
 
-    <div class="section">
-        <h2>2. No Recopilamos Datos Personales</h2>
-        <p><strong>IMPORTANTE:</strong> IG Analyzer <strong>NO</strong> recopila, almacena, transmite ni comparte ningún dato personal, incluyendo:</p>
-        <ul>
-            <li>❌ <strong>NO</strong> recopilamos nombres de usuario de Instagram</li>
-            <li>❌ <strong>NO</strong> recopilamos contraseñas o credenciales</li>
-            <li>❌ <strong>NO</strong> recopilamos correos electrónicos</li>
-            <li>❌ <strong>NO</strong> recopilamos direcciones IP</li>
-            <li>❌ <strong>NO</strong> recopilamos información de ubicación</li>
-            <li>❌ <strong>NO</strong> usamos cookies de seguimiento</li>
-            <li>❌ <strong>NO</strong> vendemos, compartimos o comercializamos datos</li>
-        </ul>
-    </div>
+            <!-- Section 1: Introduction -->
+            <section id="introduction" class="section">
+                <h2 class="section-title">1. Introducción</h2>
+                <div class="section-content">
+                    <p>IG Analyzer Pro (en adelante, "la Extensión") es una herramienta de software desarrollada como extensión para el navegador Google Chrome. El presente documento establece los términos y condiciones bajo los cuales se maneja y protege la información relacionada con el uso de esta extensión.</p>
+                    <p>Esta compañía está comprometida con la seguridad y privacidad de los datos de sus usuarios. Cuando se solicita información personal que pueda identificar al usuario, se garantiza que dicha información será utilizada únicamente de acuerdo con los términos establecidos en este documento.</p>
+                    <div class="highlight-box">
+                        <div class="highlight-box-title">Declaración de Principios</div>
+                        <p>La Extensión opera bajo el principio de minimización de datos, recopilando únicamente la información estrictamente necesaria para su funcionamiento básico. Toda operación de procesamiento de datos ocurre localmente en el dispositivo del usuario.</p>
+                    </div>
+                </div>
+            </section>
 
-    <div class="section">
-        <h2>3. Cómo Funciona la Extensión (Localmente)</h2>
-        <p>Todo el procesamiento ocurre <strong>localmente en tu navegador</strong>:</p>
-        <ol>
-            <li><strong>Acceso a Instagram:</strong> Solo accedemos a instagram.com cuando estás activamente en la página</li>
-            <li><strong>Procesamiento local:</strong> El análisis de seguidores/seguidos ocurre 100% en tu dispositivo</li>
-            <li><strong>Sin servidores externos:</strong> No enviamos datos a ningún servidor</li>
-            <li><strong>Sin almacenamiento:</strong> No guardamos resultados en la nube</li>
-        </ol>
-    </div>
+            <!-- Section 2: Scope -->
+            <section id="scope" class="section">
+                <h2 class="section-title">2. Alcance y Aplicación</h2>
+                <div class="section-content">
+                    <p>Esta Política de Privacidad se aplica exclusivamente a la Extensión IG Analyzer Pro y rige las actividades de recopilación y uso de información dentro de este entorno. La política cubre:</p>
+                    <ul>
+                        <li>El uso de la Extensión en el navegador Google Chrome</li>
+                        <li>La interacción con el sitio web instagram.com a través de la Extensión</li>
+                        <li>El almacenamiento local de datos en el dispositivo del usuario</li>
+                        <li>Las comunicaciones técnicas necesarias para el funcionamiento de la Extensión</li>
+                    </ul>
+                    <p>Esta política no se aplica a sitios web de terceros a los que el usuario pueda acceder a través de enlaces externos, ni a servicios o productos ofrecidos por otras empresas.</p>
+                </div>
+            </section>
 
-    <div class="section">
-        <h2>4. Permisos de la Extensión</h2>
-        <p>Explicación de los permisos solicitados:</p>
-        <ul>
-            <li><strong>activeTab:</strong> Solo accede a la pestaña activa de Instagram cuando activas la extensión</li>
-            <li><strong>https://www.instagram.com/:</strong> Solo funciona en la versión web de Instagram</li>
-            <li><strong>Almacenamiento local:</strong> Solo guarda preferencias de interfaz (tema, posición del panel)</li>
-        </ul>
-    </div>
+            <!-- Section 3: Data Collection -->
+            <section id="data-collection" class="section">
+                <h2 class="section-title">3. Recopilación de Información</h2>
+                <div class="section-content">
+                    <p>La Extensión está diseñada para operar con mínima recopilación de datos. La información que puede ser procesada incluye:</p>
+                    
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Tipo de Información</th>
+                                <th>Finalidad</th>
+                                <th>Almacenamiento</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Datos de perfil público de Instagram</td>
+                                <td>Análisis de seguidores y seguidos para generar informes comparativos</td>
+                                <td>Memoria temporal durante la sesión activa</td>
+                            </tr>
+                            <tr>
+                                <td>Preferencias de configuración</td>
+                                <td>Personalización de la interfaz y recordatorio de opciones seleccionadas</td>
+                                <td>Almacenamiento local del navegador</td>
+                            </tr>
+                            <tr>
+                                <td>Datos de rendimiento técnico</td>
+                                <td>Optimización del funcionamiento y detección de errores</td>
+                                <td>Registros locales no persistentes</td>
+                            </tr>
+                        </tbody>
+                    </table>
 
-    <div class="section">
-        <h2>5. Datos que se Guardan Localmente</h2>
-        <p>La extensión solo guarda en <strong>tu navegador</strong> (chrome.storage.local):</p>
-        <ul>
-            <li>⚙️ Preferencias de usuario (posición del panel, tema claro/oscuro)</li>
-            <li>💾 Cache temporal de análisis (se borra al cerrar el navegador)</li>
-            <li>🔧 Configuración de la interfaz</li>
-        </ul>
-        <p><strong>Nota:</strong> Todos estos datos son accesibles solo desde tu navegador y se eliminan si desinstalas la extensión.</p>
-    </div>
+                    <div class="definition-list">
+                        <div class="definition-term">Información No Recopilada</div>
+                        <div class="definition-description">
+                            <p>La Extensión explícitamente no recopila, almacena ni transmite:</p>
+                            <ul>
+                                <li>Credenciales de inicio de sesión (usuario/contraseña)</li>
+                                <li>Información de contacto personal (correo electrónico, teléfono)</li>
+                                <li>Datos demográficos o de ubicación</li>
+                                <li>Información financiera o de pago</li>
+                                <li>Contenido de mensajes privados o comunicaciones</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-    <div class="section">
-        <h2>6. Cumplimiento Legal</h2>
-        <p>Esta extensión cumple con:</p>
-        <ul>
-            <li>✅ <strong>GDPR</strong> (Reglamento General de Protección de Datos de la UE)</li>
-            <li>✅ <strong>CCPA</strong> (Ley de Privacidad del Consumidor de California)</li>
-            <li>✅ <strong>COPPA</strong> (No recopila datos de menores de 13 años)</li>
-            <li>✅ <strong>Políticas de Chrome Web Store</strong></li>
-        </ul>
-    </div>
+            <!-- Section 4: Data Usage -->
+            <section id="data-usage" class="section">
+                <h2 class="section-title">4. Uso de la Información</h2>
+                <div class="section-content">
+                    <p>La información recopilada se utiliza exclusivamente para los siguientes propósitos:</p>
+                    
+                    <ol>
+                        <li><strong>Funcionalidad Principal:</strong> Procesar y analizar listas de seguidores y seguidos de cuentas de Instagram para identificar coincidencias y discrepancias.</li>
+                        <li><strong>Mejora del Servicio:</strong> Optimizar el rendimiento y la experiencia de usuario basándose en datos anónimos de uso.</li>
+                        <li><strong>Mantenimiento Técnico:</strong> Diagnosticar y resolver problemas técnicos que puedan surgir durante el uso de la Extensión.</li>
+                        <li><strong>Personalización:</strong> Recordar las preferencias de configuración seleccionadas por el usuario para experiencias futuras.</li>
+                    </ol>
 
-    <div class="contact">
-        <h2>7. Contacto</h2>
-        <p>Si tienes preguntas sobre esta política de privacidad, puedes contactarnos en:</p>
-        <p><strong>Email:</strong> [TU_EMAIL@DOMINIO.com]</p>
-        <p><strong>Sitio web:</strong> [TU_SITIO_WEB.com]</p>
-        <p><strong>Nota:</strong> No tenemos servidores de datos, por lo que no podemos acceder, modificar o eliminar datos personales porque no los recopilamos.</p>
-    </div>
+                    <div class="highlight-box">
+                        <div class="highlight-box-title">Principio de Procesamiento Local</div>
+                        <p>Todos los análisis de datos se realizan localmente en el dispositivo del usuario. No existe transmisión de datos personales a servidores externos, ni procesamiento en la nube de la información analizada. La Extensión opera bajo una arquitectura de procesamiento 100% local.</p>
+                    </div>
+                </div>
+            </section>
 
-    <div class="section">
-        <h2>8. Cambios en esta Política</h2>
-        <p>Nos reservamos el derecho de actualizar esta política de privacidad. Cualquier cambio será publicado en esta página con la fecha de actualización.</p>
-    </div>
+            <!-- Section 5: Data Security -->
+            <section id="data-security" class="section">
+                <h2 class="section-title">5. Seguridad de los Datos</h2>
+                <div class="section-content">
+                    <p>La seguridad de los datos del usuario es una prioridad fundamental. Implementamos las siguientes medidas de protección:</p>
+                    
+                    <ul>
+                        <li><strong>Arquitectura Local:</strong> Todos los datos permanecen en el dispositivo del usuario, eliminando riesgos asociados con transmisión de red o almacenamiento en servidores externos.</li>
+                        <li><strong>Sandbox del Navegador:</strong> La Extensión opera dentro del entorno seguro y aislado proporcionado por Google Chrome.</li>
+                        <li><strong>Minimización de Permisos:</strong> Solicitamos únicamente los permisos esenciales para la funcionalidad básica, siguiendo el principio de mínimo privilegio.</li>
+                        <li><strong>Sin Persistencia:</strong> Los datos de análisis se mantienen en memoria temporal y se eliminan automáticamente al cerrar la pestaña o el navegador.</li>
+                    </ul>
 
-    <div class="date">
-        <p><strong>Fecha de vigencia:</strong> [FECHA ACTUAL]</p>
-        <p><strong>Fecha de última actualización:</strong> [FECHA ACTUAL]</p>
-    </div>
+                    <p>Los permisos solicitados por la Extensión incluyen:</p>
+                    
+                    <div class="definition-list">
+                        <div class="definition-term">activeTab</div>
+                        <div class="definition-description">Permite acceso temporal a la pestaña activa de Instagram.com únicamente cuando el usuario activa la Extensión.</div>
+                        
+                        <div class="definition-term">Almacenamiento Local</div>
+                        <div class="definition-description">Capacidad para guardar preferencias de configuración en el dispositivo del usuario, sin sincronización con servicios en la nube.</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 6: User Rights -->
+            <section id="user-rights" class="section">
+                <h2 class="section-title">6. Derechos del Usuario</h2>
+                <div class="section-content">
+                    <p>De acuerdo con las regulaciones de protección de datos aplicables, los usuarios disponen de los siguientes derechos:</p>
+                    
+                    <ul>
+                        <li><strong>Derecho de Acceso:</strong> Confirmación sobre si se están procesando datos personales y acceso a dichos datos.</li>
+                        <li><strong>Derecho de Rectificación:</strong> Solicitud de corrección de datos inexactos o incompletos.</li>
+                        <li><strong>Derecho de Supresión:</strong> Solicitud de eliminación de datos personales cuando ya no sean necesarios.</li>
+                        <li><strong>Derecho de Oposición:</strong> Oposición al procesamiento de datos personales en ciertas circunstancias.</li>
+                        <li><strong>Derecho a la Portabilidad:</strong> Recepción de los datos personales en un formato estructurado y de uso común.</li>
+                    </ul>
+
+                    <p>Para ejercer estos derechos, o para cualquier consulta relacionada con la protección de datos, los usuarios pueden contactar a través de los medios proporcionados en la sección de Información de Contacto.</p>
+
+                    <div class="highlight-box">
+                        <div class="highlight-box-title">Procedimiento de Ejercicio de Derechos</div>
+                        <p>Dado que la Extensión no mantiene bases de datos centralizadas ni recopila información identificable de manera persistente, la mayoría de derechos se ejercen automáticamente mediante la arquitectura de diseño de la aplicación. La desinstalación de la Extensión elimina por completo todos los datos locales asociados.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 7: Third Parties -->
+            <section id="third-parties" class="section">
+                <h2 class="section-title">7. Terceros y Enlaces Externos</h2>
+                <div class="section-content">
+                    <p>La Extensión opera de manera independiente y no comparte datos con terceros. Sin embargo, es importante considerar los siguientes aspectos:</p>
+                    
+                    <ul>
+                        <li><strong>Instagram.com:</strong> La Extensión interactúa únicamente con el sitio web instagram.com para acceder a información pública de perfiles. Esta interacción está sujeta a los Términos de Servicio y Políticas de Privacidad de Instagram/Meta.</li>
+                        <li><strong>Google Chrome:</strong> Como extensión del navegador Chrome, ciertos datos técnicos pueden ser recopilados por Google según su propia Política de Privacidad.</li>
+                        <li><strong>Chrome Web Store:</strong> La distribución a través de Chrome Web Store está sujeta a las políticas y términos de Google.</li>
+                    </ul>
+
+                    <p>Esta Política de Privacidad no se aplica a sitios web de terceros a los que el usuario pueda acceder a través de enlaces externos. Se recomienda revisar las políticas de privacidad de dichos sitios antes de proporcionar cualquier información personal.</p>
+                </div>
+            </section>
+
+            <!-- Section 8: Changes -->
+            <section id="changes" class="section">
+                <h2 class="section-title">8. Cambios en la Política</h2>
+                <div class="section-content">
+                    <p>Nos reservamos el derecho de modificar esta Política de Privacidad en cualquier momento para reflejar cambios en nuestras prácticas de procesamiento de datos, actualizaciones regulatorias o mejoras en la funcionalidad de la Extensión.</p>
+                    
+                    <p>Cuando se realicen cambios significativos en esta política, se tomarán las siguientes medidas:</p>
+                    
+                    <ol>
+                        <li>Actualización de la fecha de "Última actualización" en la parte superior de este documento.</li>
+                        <li>Publicación de la versión actualizada en la misma ubicación accesible.</li>
+                        <li>En caso de cambios sustanciales, notificación a través de los canales apropiados.</li>
+                    </ol>
+
+                    <p>Se recomienda a los usuarios revisar periódicamente esta Política de Privacidad para mantenerse informados sobre cómo protegemos la información que procesamos. El uso continuado de la Extensión después de la publicación de cambios constituye la aceptación de dichos cambios.</p>
+                </div>
+            </section>
+
+            <!-- Section 9: Contact -->
+            <section id="contact" class="section">
+                <h2 class="section-title">9. Información de Contacto</h2>
+                <div class="section-content">
+                    <p>Para preguntas, preocupaciones o solicitudes relacionadas con esta Política de Privacidad o el tratamiento de datos personales, puede contactar a:</p>
+                    
+                    <div class="highlight-box">
+                        <div class="highlight-box-title">Responsable del Tratamiento de Datos</div>
+                        <p><strong>IG Analyzer Pro</strong><br>
+                        Departamento de Privacidad y Protección de Datos</p>
+                    </div>
+
+                    <p>Tenga en cuenta que, debido a la arquitectura local de la Extensión, no mantenemos bases de datos centralizadas de usuarios. Las consultas serán atendidas en función de la información proporcionada voluntariamente en la comunicación.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="contact-info">
+                    <div class="contact-title">Contacto para Asuntos de Privacidad</div>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-label">Correo Electrónico</div>
+                            <div class="contact-value">privacy@iganalyzer.pro</div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-label">Sitio Web</div>
+                            <div class="contact-value">https://iganalyzer.pro</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="copyright">
+                    <p>© 2024 IG Analyzer Pro. Todos los derechos reservados.</p>
+                    <p>Esta Política de Privacidad está redactada en cumplimiento con las regulaciones aplicables de protección de datos.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Set current date
+        const currentDate = new Date();
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        document.getElementById('currentDate').textContent = currentDate.toLocaleDateString('es-ES', options);
+        
+        // Smooth scroll for table of contents links
+        document.querySelectorAll('.toc-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Add print button functionality
+        const printButton = document.createElement('button');
+        printButton.textContent = 'Imprimir Política';
+        printButton.style.cssText = `
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--accent);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        `;
+        
+        printButton.addEventListener('mouseenter', () => {
+            printButton.style.transform = 'translateY(-2px)';
+            printButton.style.boxShadow = '0 4px 15px rgba(0,0,0,0.3)';
+        });
+        
+        printButton.addEventListener('mouseleave', () => {
+            printButton.style.transform = 'translateY(0)';
+            printButton.style.boxShadow = '0 2px 10px rgba(0,0,0,0.2)';
+        });
+        
+        printButton.addEventListener('click', () => {
+            window.print();
+        });
+        
+        document.body.appendChild(printButton);
+        
+        // Highlight current section in TOC on scroll
+        const sections = document.querySelectorAll('.section');
+        const tocLinks = document.querySelectorAll('.toc-link');
+        
+        function updateTocHighlight() {
+            let currentSection = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                const scrollPosition = window.scrollY + 150;
+                
+                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                    currentSection = '#' + section.id;
+                }
+            });
+            
+            tocLinks.forEach(link => {
+                link.style.fontWeight = link.getAttribute('href') === currentSection ? '600' : '400';
+                link.style.color = link.getAttribute('href') === currentSection ? 'var(--primary)' : 'var(--accent)';
+            });
+        }
+        
+        window.addEventListener('scroll', updateTocHighlight);
+        window.addEventListener('load', updateTocHighlight);
+    </script>
 </body>
 </html>
